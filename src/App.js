@@ -1,5 +1,5 @@
 import React from 'react'
-import { Router } from '@reach/router'
+import { Router, Link } from '@reach/router'
 import { render } from 'react-dom'
 import SearchParams from './SearchParams'
 import Details from './Details'
@@ -7,7 +7,9 @@ import Details from './Details'
 const App = () => {
   return (
     <div>
-      <h1>Adopt Me!</h1>
+      <header>
+        <Link to="/">Adopt Me!</Link>
+      </header>
       <Router>
         <SearchParams path="/" />
         <Details path="/details/:id" />
